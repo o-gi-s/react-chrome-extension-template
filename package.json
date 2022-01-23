@@ -27,6 +27,6 @@
   },
   "scripts": {
     "build": "webpack --mode production --config webpack.config.js",
-    "dev": "NODE_ENV=development webpack --config webpack.dev.js --mode=development --watch"
+    "dev": "webpack --config webpack.dev.js --mode=development --watch"
   }
 }
