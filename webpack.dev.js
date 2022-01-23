@@ -6,6 +6,9 @@ const ExtensionReloader = require('webpack-extension-reloader');
 module.exports = merge(base, {
   mode: 'development',
   watch: true,
+  resolve: {
+    extensions: ['.js', '.tsx']
+  },
   entry: {
     'content-script': './src/content.tsx',
     background: './src/background.ts',

@@ -5,6 +5,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  resolve: {
+    extensions: ['.js', '.tsx']
+  },
   entry: {
     app: './src/index.tsx',
     content: './src/content.tsx',
