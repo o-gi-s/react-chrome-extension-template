@@ -5,6 +5,7 @@
   "author": "hiro08gh",
   "license": "MIT",
   "devDependencies": {
+    "@types/chrome": "0.0.176",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "awesome-typescript-loader": "^5.2.1",
