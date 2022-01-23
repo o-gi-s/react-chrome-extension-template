@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Box, Button } from '@material-ui/core';
+import { Box } from '@material-ui/core';
+import { SwitchBtn } from "./atoms/SwitchBtn/SwitchBtn";
+import { ProgressBtn } from './atoms/ProgressBtn/ProgressBtn';
 
 const App = () => <>
-  <Box width="324px" textAlign="center"> 
-    <Button color="primary">Hello World</Button>
+  <Box width="260px" textAlign="center">
+    <SwitchBtn />
+    <ProgressBtn />
   </Box>
 </>;
 
