@@ -1,7 +1,9 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { FC, useState } from "react";
 import { Box, FormControlLabel, Switch } from "@material-ui/core";
+import { useDidUpdateEffect } from "../../hooks/useDidUpdateEffect";
 
 export interface SwitchBtnProps {
+  initChecked?: boolean;
   onChange?: (checked: boolean) => void;
 }
 
@@ -10,11 +12,13 @@ export interface SwitchBtnProps {
  * @param props 
  */
 export const SwitchBtn: FC<SwitchBtnProps> = ({
+  initChecked = false,
   onChange = () => {}
 }) => {
 
-  const [checked, setChecked] = useState(false);
-  useEffect(() => onChange(checked), [checked]);
+  const [checked, setChecked] = useState(initChecked);
+  useDidUpdateEffect(() => setChecked(initChecked), [initChecked]);
+  useDidUpdateEffect(() => onChange(checked), [checked]);
 
   return (
     <>
@@ -25,10 +29,14 @@ export const SwitchBtn: FC<SwitchBtnProps> = ({
               checked={ checked }
               onChange={ () => setChecked(state => !state) }
               name="checkedB"
-              color="primary"
+              color="secondary"
             />
           }
-          label="連続再生"
+          label={
+            <span style={{ color: "#222" }}>
+              連続再生
+            </span>
+          }
         />
       </Box>
     </>

@@ -7,7 +7,7 @@ module.exports = merge(base, {
   mode: 'development',
   watch: true,
   resolve: {
-    extensions: ['.js', '.tsx']
+    extensions: ['.js', '.tsx', '.ts']
   },
   entry: {
     'content-script': './src/content.tsx',

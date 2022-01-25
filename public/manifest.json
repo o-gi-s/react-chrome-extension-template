@@ -9,7 +9,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://hiro08gh.com/"],
+      "matches": ["https://room.internet.ac.jp/"],
       "js": ["content.js"]
     }
   ],
